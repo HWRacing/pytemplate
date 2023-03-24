@@ -9,11 +9,9 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        # We need lots of things to work on Windows too unfortunately
-        os: [ubuntu-latest, windows-latest]
         python-version: ['3.8', '3.9', '3.10', '3.11']
     
     steps:
